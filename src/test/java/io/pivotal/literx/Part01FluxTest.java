@@ -1,5 +1,6 @@
 package io.pivotal.literx;
 
+import io.pivotal.literx.domain.User;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
@@ -19,7 +20,6 @@ public class Part01FluxTest {
 	@Test
 	public void empty() {
 		Flux<String> flux = workshop.emptyFlux();
-
 		StepVerifier.create(flux)
 				.verifyComplete();
 	}
